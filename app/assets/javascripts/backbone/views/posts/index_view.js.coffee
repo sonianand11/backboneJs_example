@@ -4,6 +4,7 @@ class BackboneJsExample.Views.Posts.IndexView extends Backbone.View
   template: JST["backbone/templates/posts/index"]
 
   initialize: () ->
+    #console.log(@options)
     @options.posts.bind('reset', @addAll)
 
   addAll: () =>

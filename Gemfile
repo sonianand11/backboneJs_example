@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.9'
+gem 'rails', '3.2.11'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+gem 'ejs'
 group :development, :test do
   gem 'sqlite3'
 end
@@ -24,6 +24,12 @@ group :assets do
   gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+end
+group :development,:test do
+	  gem "rspec-rails", ">= 2.0.1"
+	  gem 'database_cleaner'
+		gem 'cucumber-rails'
+	  gem 'capybara-webkit'
 end
 
 gem 'jquery-rails'

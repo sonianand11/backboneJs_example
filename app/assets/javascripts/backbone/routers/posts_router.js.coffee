@@ -1,6 +1,7 @@
 class BackboneJsExample.Routers.PostsRouter extends Backbone.Router
   initialize: (options) ->
     @posts = new BackboneJsExample.Collections.PostsCollection()
+    #console.log(options);
     @posts.reset options.posts
 
   routes:
@@ -15,6 +16,7 @@ class BackboneJsExample.Routers.PostsRouter extends Backbone.Router
     $("#posts").html(@view.render().el)
 
   index: ->
+    #console.log(@posts);
     @view = new BackboneJsExample.Views.Posts.IndexView(posts: @posts)
     $("#posts").html(@view.render().el)
 
